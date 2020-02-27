@@ -17,10 +17,6 @@
 		@Prop() houses!: House[];
 		isFullSize?: boolean = false;
 
-		onMapHover(e: MouseEvent) {
-			console.log(e)
-		}
-
 		housePosition(house: House) {
 			const ratio = this.isFullSize ? 2.5 : 1;
 		}

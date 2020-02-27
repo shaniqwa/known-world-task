@@ -69,9 +69,6 @@ export default new Vuex.Store({
 					}, rand);
 			}());
 		},
-		winner(context, house) {
-			context.commit('seWinner', house);
-		},
 		getHouses(context) {
 			const houses = data['houses'].map(house => new House(house));
 			context.commit('setHouses', houses);
@@ -80,7 +77,10 @@ export default new Vuex.Store({
 		},
 		updateHouse(context, house) {
 			context.commit('updateHouse', house);
-		}
+		},
+		setWinner(context, house) {
+			context.commit('seWinner', house);
+		},
 	},
 	modules: {},
 });
