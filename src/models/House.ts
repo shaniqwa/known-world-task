@@ -23,10 +23,10 @@ export default class House {
       this.position = options.position || {x: 0, y: 0};
       this.flag = options.flag || '';
 		this.strength = options.strength || 5;
-      this.score = this.calcScore()
+      this.score = House.calcScore()
    }
 
-   private calcScore(): number {
+   private static calcScore(): number {
 		return Math.ceil(Math.random() * 10);
 	}
 }

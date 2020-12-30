@@ -4,6 +4,7 @@ import data from '../../public/init.json';
 import House from '@/models/House';
 import {IPoint} from '@/models/IPoint';
 import moment from 'moment';
+import {IUpdate} from '@/models/IUpdate';
 
 Vue.use(Vuex);
 
@@ -11,11 +12,7 @@ export interface IStore {
 	kingsLandingPosition: IPoint;
 	winner: House | undefined;
 	houses: House[];
-	updates: {
-		house: House;
-		steps: number;
-		score: number;
-	}[];
+	updates: IUpdate[];
 }
 
 export default new Vuex.Store({
@@ -30,6 +27,7 @@ export default new Vuex.Store({
 		latestUpdate: (state) => state.updates[state.updates.length - 1] || null,
 		houses: (state) => state.houses,
 		houseByName: (state) => (houseName: string) => state.houses.find(house => house.name === houseName),
+		houseByScore: (state) => state.houses.sort((houseA, houseB) => houseB.score - houseA.score),
 		kingsLandingPosition: (state) => state.kingsLandingPosition,
 		winner: (state) => state.winner
 	},
