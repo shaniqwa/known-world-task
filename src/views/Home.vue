@@ -93,8 +93,10 @@ export default class Home extends Vue {
 
     if (house.name !== 'Lannister' && this.hasReachedKingsLanding(house)) {
       const winner = this.calcWinner(house);
+      this.$store.dispatch('updateHouse', house);
       this.$store.dispatch('setWinner', winner);
-      alert(winner.name + ' has won!');
+      setTimeout(() => alert(winner.name + ' has won!'), 500);
+      return;
     }
 
     this.$store.dispatch('updateHouse', house);

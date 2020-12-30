@@ -23,7 +23,7 @@ export default new Vuex.Store({
 		updates: []
 	} as IStore,
 	getters: {
-		updates: (state) => state.updates,
+		updates: (state) => state.updates.sort((a: IUpdate, b: IUpdate) => b.timestamp.valueOf() - a.timestamp.valueOf()),
 		latestUpdate: (state) => state.updates[state.updates.length - 1] || null,
 		houses: (state) => state.houses,
 		houseByName: (state) => (houseName: string) => state.houses.find(house => house.name === houseName),
