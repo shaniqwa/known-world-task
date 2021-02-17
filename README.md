@@ -5,6 +5,12 @@ The Lannisters have taken over Kings Landing! Now all houses of the seven kingdo
 ### Mission 
 We would like you to continue working on our Vue.js web application that will help us monitor the armies activity in The Known World. You will receive updates on the army’s position and score and display them on a map. Once an army arrives to Kings Landing, the battle begin and the House with the higher score wins.
 
+### Demo
+In this round, notice the White Walkers army is the first to arrive to Kings Landing.
+Since they gained a higher score then the Lannisters, they have won.
+![](public/demo.gif)
+
+After refresh, a new game will start!
 
 ### Requirements - Client
 
