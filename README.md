@@ -8,6 +8,7 @@ We would like you to continue working on our Vue.js web application that will he
 ### Demo
 In this round, notice the White Walkers army is the first to arrive to Kings Landing.
 Since they gained a higher score then the Lannisters, they have won.
+
 ![](public/demo.gif)
 
 After refresh, a new game will start!
