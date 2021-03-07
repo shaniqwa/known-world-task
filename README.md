@@ -11,7 +11,7 @@ We would like you to continue working on our Vue.js web application that will he
 In this round, notice the White Walkers army is the first to arrive to Kings Landing.
 Since they gained a higher score then the Lannisters, they have won.
 
-![](public/demo.gif)
+![](client/public/demo.gif)
 
 After refresh, a new game will start!
 
@@ -42,31 +42,3 @@ After refresh, a new game will start!
 - Score Board: Display the list of houses sorted by score. The winner should be highlighted with bold text.
 - Updates: Display a list of the incoming updates sorted from the latest -> oldest.
 - Fetch the Houses list from a DB
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

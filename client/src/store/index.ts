@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import data from '../../public/init.json';
-import House from '@/models/House';
-import {IPoint} from '@/models/IPoint';
+import House from '../models/House';
+import {IPoint} from '../models/IPoint';
 import moment from 'moment';
 
 Vue.use(Vuex);

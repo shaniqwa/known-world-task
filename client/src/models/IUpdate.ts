@@ -1,5 +1,5 @@
-import House from '@/models/House';
 import {Moment} from 'moment';
+import House from './House';
 
 export interface IUpdate {
 	timestamp: Moment;

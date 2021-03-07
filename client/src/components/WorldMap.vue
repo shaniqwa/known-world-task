@@ -7,8 +7,8 @@
 </template>
 
 <script lang="ts">
-	import {Component, Prop, Vue, Watch} from 'vue-property-decorator';
-	import House from '@/models/House';
+	import {Component, Prop, Vue} from 'vue-property-decorator';
+  import House from '../models/House';
 
 	@Component({
 		name: 'world-map'

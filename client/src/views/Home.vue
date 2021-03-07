@@ -18,11 +18,11 @@
 
 <script lang="ts">
 	// @ is an alias to /src
-	import WorldMap from '@/components/WorldMap.vue';
+	import WorldMap from '../components/WorldMap.vue';
 	import {Component, Vue, Watch} from 'vue-property-decorator';
-	import House from '@/models/House';
-	import {IPoint} from '@/models/IPoint';
-	import {IUpdate} from '@/models/IUpdate';
+	import House from '../models/House';
+	import {IPoint} from '../models/IPoint';
+	import {IUpdate} from '../models/IUpdate';
 
 	@Component({
 		name: 'Home',
