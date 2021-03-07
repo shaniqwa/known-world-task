@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/shaniqwa/known-world-task)
+
 # The Known World
 
 The Lannisters have taken over Kings Landing! Now all houses of the seven kingdoms declare war and head with their armies towards Kings Landing, to restore the order and be the next to sit on the Iron Throne.
