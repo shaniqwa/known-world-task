@@ -1,2 +1,5 @@
+ports:
+  - port: 8080
+    onOpen: open-preview
 tasks:
-  - init: npm install && npm run build
+  - init: npm install && npm run serve
