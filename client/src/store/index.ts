@@ -6,6 +6,18 @@ import {IPoint} from '../models/IPoint';
 import moment from 'moment';
 import axios from 'axios';
 
+let serverURL = '';
+
+if (process.env.VUE_APP_GITPOD_WORKSPACE_URL && process.env.VUE_APP_SERVER_PORT) {
+    const appendPort = process.env.VUE_APP_SERVER_PORT + '-';
+    const base = process.env.VUE_APP_GITPOD_WORKSPACE_URL;
+    serverURL = [base.slice(0, 8), appendPort, base.slice(8)].join('');
+    serverURL += '/api'
+} else {
+    serverURL =  'http://localhost:3000/api/';
+}
+
+
 Vue.use(Vuex);
 
 export interface IStore {
@@ -71,21 +83,10 @@ export default new Vuex.Store({
 			}());
 		},
 		getHouses(context) {
+			const houses: House[] = data['houses'].map((house: any) => new House(house));
+            context.commit('setHouses', houses);
 
-			const config = {
-				baseURL: 'http://localhost:3000/api/',
-				headers: {
-					Accept: 'application/json',
-					'Content-Type': 'application/json'
-				}
-			}
-			axios.get('houses', config).then((res) => {
-				const houses: House[] = data['houses'].map((house: any) => new House(house));
-				context.commit('setHouses', houses);
-
-				return houses;
-			});
-
+            return houses;
 		},
 		updateHouse(context, house) {
 			context.commit('updateHouse', house);
