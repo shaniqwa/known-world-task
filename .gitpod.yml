@@ -2,4 +2,9 @@ ports:
   - port: 8080
     onOpen: open-preview
 tasks:
-  - init: npm install && npm run serve
+  - command: cd client && npm install && npm run serve
+    name: Vue app
+  - openMode: tab-after
+  - command: cd server && npm install && npm run start
+    name: Server
+  - openIn: right

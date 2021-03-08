@@ -1,9 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import data from '../../public/init.json';
-import House from '@/models/House';
-import {IPoint} from '@/models/IPoint';
+import House from '../models/House';
+import {IPoint} from '../models/IPoint';
 import moment from 'moment';
+import axios from 'axios';
+
+const serverURL = process.env.GITPOD_WORKSPACE_URL || 'http://localhost:3000/api/';
 
 Vue.use(Vuex);
 
@@ -70,10 +73,21 @@ export default new Vuex.Store({
 			}());
 		},
 		getHouses(context) {
-			const houses = data['houses'].map(house => new House(house));
-			context.commit('setHouses', houses);
+			console.log('serverURL', serverURL);
+			const config = {
+				baseURL: serverURL,
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json'
+				}
+			}
+			axios.get('houses', config).then((res) => {
+				const houses: House[] = data['houses'].map((house: any) => new House(house));
+				context.commit('setHouses', houses);
 
-			return houses;
+				return houses;
+			});
+
 		},
 		updateHouse(context, house) {
 			context.commit('updateHouse', house);

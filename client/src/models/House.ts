@@ -1,4 +1,4 @@
-import {IPoint} from '@/models/IPoint';
+import {IPoint} from './IPoint';
 
 export default class House {
    public id: number;
