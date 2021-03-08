@@ -3,4 +3,8 @@ ports:
     onOpen: open-preview
 tasks:
   - command: cd client && npm install && npm run serve
+    name: Vue app
+  - openMode: tab-after
   - command: cd server && npm install && npm run start
+    name: Server
+  - openIn: right
