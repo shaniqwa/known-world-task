@@ -6,6 +6,8 @@ import {IPoint} from '../models/IPoint';
 import moment from 'moment';
 import axios from 'axios';
 
+const serverURL = process.env.GITPOD_WORKSPACE_URL || 'http://localhost:3000/api/';
+
 Vue.use(Vuex);
 
 export interface IStore {
@@ -71,9 +73,9 @@ export default new Vuex.Store({
 			}());
 		},
 		getHouses(context) {
-
+			console.log('serverURL', serverURL);
 			const config = {
-				baseURL: 'http://localhost:3000/api/',
+				baseURL: serverURL,
 				headers: {
 					Accept: 'application/json',
 					'Content-Type': 'application/json'

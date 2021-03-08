@@ -21,7 +21,7 @@ After refresh, a new game will start!
 
 2. Subscribe to updates (use the local service provided in the code as mock)
 
-3. On new update, calculate the house new position and move it on the map. If the house reaches kings landing, it will stop there.
+3. On a new update, calculate the house new position and move it on the map. If the house reaches kings landing, it will stop there.
 
 4. Determine the winner: the first house to reach Kings Landing will fight the Lannisters. The house with the higher score wins. Display a winner alert.
 
@@ -34,8 +34,8 @@ After refresh, a new game will start!
 
 ### Notes
 
-- You may, if you wish, re-write the client side in any framework of your choise.
-- Priority is to complete the Client side, than move on to Server if you wish.
+- You may, if you wish, re-write the client side in any framework of your choice.
+- Priority is to complete the Client side, then move on to Server.
 
 ### Bonus Points
 
@@ -45,4 +45,5 @@ After refresh, a new game will start!
 
 ### Running your solution
  Please use Gitpod to run the solution, so we can easily test it :)
+ 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/shaniqwa/known-world-task)
