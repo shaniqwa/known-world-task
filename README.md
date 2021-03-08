@@ -42,3 +42,7 @@ After refresh, a new game will start!
 - Score Board: Display the list of houses sorted by score. The winner should be highlighted with bold text.
 - Updates: Display a list of the incoming updates sorted from the latest -> oldest.
 - Fetch the Houses list from a DB
+
+### Running your solution
+ Please use Gitpod to run the solution, so we can easily test it :)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/shaniqwa/known-world-task)
