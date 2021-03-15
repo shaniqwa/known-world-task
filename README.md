@@ -22,6 +22,9 @@ After refresh, a new game will start!
 2. Subscribe to updates (use the local service provided in the code as mock)
 
 3. On a new update, calculate the house new position and move it on the map. If the house reaches kings landing, it will stop there.
+    - Don't pass the destination: if the event states to proceed X steps, but the Lannisters are at a smaller distance, 
+    consider this house has reached the Lannisters and set the correct position.
+    - On every event, houses gain score which should be added to their current score.  
 
 4. Determine the winner: the first house to reach Kings Landing will fight the Lannisters. The house with the higher score wins. Display a winner alert.
 
@@ -41,7 +44,7 @@ After refresh, a new game will start!
 
 - Score Board: Display the list of houses sorted by score. The winner should be highlighted with bold text.
 - Updates: Display a list of the incoming updates sorted from the latest -> oldest.
-- Fetch the Houses list from a DB
+- Fetch the Houses list from a DB. Should provide dockerized DB or run with Gitpod
 
 ### Running your solution
  Please use Gitpod to run the solution, so we can easily test it :)
